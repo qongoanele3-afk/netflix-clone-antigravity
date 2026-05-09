@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone by Charmy</title>
+    <meta name="description" content="A simple responsive Netflix clone UI.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="logo">NETFLIX CLONE by Charmy</div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-icon" id="mobile-menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Cyber City</h1>
+            <p class="hero-description">A visually stunning journey into the futuristic world of cyberpunk, neon lights,
+                and high-tech mysteries. Watch it now and experience the thrill.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-play" id="btn-play">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    Play
+                </button>
+                <button class="btn btn-more" id="btn-more">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path
+                            d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z" />
+                    </svg>
+                    More Info
+                </button>
+            </div>
+        </div>
+        <div class="hero-fadeBottom"></div>
+    </div>
+
+    <main>
+        <section class="row">
+            <h2>Trending Now</h2>
+            <div class="row-posters">
+                <img src="images/movie_poster.png" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum1/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum2/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum3/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum4/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum5/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum6/200/300" alt="Movie Poster" class="poster poster-large">
+                <img src="https://picsum.photos/seed/picsum7/200/300" alt="Movie Poster" class="poster poster-large">
+            </div>
+        </section>
+
+        <section class="row">
+            <h2>Top Rated</h2>
+            <div class="row-posters">
+                <img src="https://picsum.photos/seed/rated1/200/300" alt="Movie Poster" class="poster">
+                <img src="images/movie_poster.png" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated3/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated4/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated5/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated6/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated7/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/rated8/200/300" alt="Movie Poster" class="poster">
+            </div>
+        </section>
+
+        <section class="row">
+            <h2>Thriller Movies</h2>
+            <div class="row-posters">
+                <img src="https://picsum.photos/seed/action1/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action2/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action3/200/300" alt="Movie Poster" class="poster">
+                <img src="images/movie_poster.png" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action5/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action6/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action7/200/300" alt="Movie Poster" class="poster">
+                <img src="https://picsum.photos/seed/action8/200/300" alt="Movie Poster" class="poster">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

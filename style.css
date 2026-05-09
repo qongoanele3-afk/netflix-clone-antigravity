@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    z-index: 100;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.navbar.scrolled {
+    background-color: #111;
+    padding: 15px 4%;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.desktop-nav ul li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.desktop-nav ul li a:hover {
+    color: #fff;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.mobile-menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-image: url('images/hero_banner.png');
+    background-size: cover;
+    background-position: center 20%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    margin-left: 4%;
+    padding-top: 50px;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-play {
+    background-color: white;
+    color: black;
+}
+
+.btn-play:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-more {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.btn-more:hover {
+    background-color: rgba(109, 109, 110, 0.4);
+}
+
+.hero-fadeBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(180deg,
+            transparent,
+            rgba(17, 17, 17, 0.61),
+            #111);
+}
+
+/* Rows */
+main {
+    padding: 0 4%;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+}
+
+.row {
+    margin-bottom: 50px;
+}
+
+.row h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #e5e5e5;
+    transition: color 0.3s;
+}
+
+.row h2:hover {
+    color: #fff;
+}
+
+.row-posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px 0;
+    gap: 15px;
+    scroll-behavior: smooth;
+}
+
+.row-posters::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari and Opera */
+}
+
+.row-posters {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.poster {
+    min-width: 140px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.poster:hover {
+    transform: scale(1.08);
+}
+
+.poster-large {
+    min-width: 180px;
+    height: 260px;
+}
+
+.poster-large:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+
+    .poster {
+        min-width: 120px;
+        height: 180px;
+    }
+
+    .poster-large {
+        min-width: 150px;
+        height: 225px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        margin-top: 30px;
+    }
+}
